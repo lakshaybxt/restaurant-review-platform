@@ -19,8 +19,8 @@ A full-stack backend system where users can review and search restaurants. Built
 - Logs visualized using Kibana
 - Containerized using Docker
 
-## 📸 Screenshots / API Docs (if any)
-(Add Postman collection or Swagger UI screenshot)
+## 📸 Screenshots / API Docs 
+(Later)
 
 ## 🐳 How to Run
 1. Clone the repo
