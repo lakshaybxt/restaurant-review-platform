@@ -1,4 +1,4 @@
-package com.lakshay.restaurant.domain.enitities;
+package com.lakshay.restaurant.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,17 +11,11 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class TimeRange {
 
     @Field(type = FieldType.Keyword)
-    private String id;
+    private String openTime;
 
-    @Field(type = FieldType.Text) // For partial search we use text
-    private String name;
-
-    @Field(type = FieldType.Text)
-    private String givenName;
-
-    @Field(type = FieldType.Text)
-    private String familyName;
+    @Field(type = FieldType.Keyword)
+    private String closeTime;
 }

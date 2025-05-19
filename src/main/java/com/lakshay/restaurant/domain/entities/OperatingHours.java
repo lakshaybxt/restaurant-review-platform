@@ -1,4 +1,4 @@
-package com.lakshay.restaurant.domain.enitities;
+package com.lakshay.restaurant.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

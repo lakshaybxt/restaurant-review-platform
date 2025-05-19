@@ -1,24 +1,27 @@
-package com.lakshay.restaurant.domain.enitities;
+package com.lakshay.restaurant.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
-
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Photo {
+public class User {
 
     @Field(type = FieldType.Keyword)
-    private String url;
+    private String id;
 
-    @Field(type = FieldType.Date, format = DateFormat.date_hour_minute_second)
-    private LocalDateTime uploadDate;
+    @Field(type = FieldType.Text) // For partial search we use text
+    private String username;
+
+    @Field(type = FieldType.Text)
+    private String givenName;
+
+    @Field(type = FieldType.Text)
+    private String familyName;
 }
