@@ -2,7 +2,6 @@ package com.lakshay.restaurant.exceptions;
 
 public class StorageException extends BaseException {
     public StorageException() {
-        super();
     }
 
     public StorageException(String message) {
@@ -11,5 +10,9 @@ public class StorageException extends BaseException {
 
     public StorageException(String message, Throwable cause) {
         super(message, cause);
+    }
+
+    public StorageException(Throwable cause) {
+        super(cause);
     }
 }

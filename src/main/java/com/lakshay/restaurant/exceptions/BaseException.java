@@ -2,7 +2,6 @@ package com.lakshay.restaurant.exceptions;
 
 public class BaseException extends RuntimeException {
     public BaseException() {
-        super();
     }
 
     public BaseException(String message) {
@@ -11,5 +10,9 @@ public class BaseException extends RuntimeException {
 
     public BaseException(String message, Throwable cause) {
         super(message, cause);
+    }
+
+    public BaseException(Throwable cause) {
+        super(cause);
     }
 }
