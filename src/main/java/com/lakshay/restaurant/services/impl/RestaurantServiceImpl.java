@@ -101,4 +101,9 @@ public class RestaurantServiceImpl implements RestaurantService {
 
         return restaurantRepository.save(existingRestaurant);
     }
+
+    @Override
+    public void deleteRestaurant(String id) {
+        restaurantRepository.deleteById(id);
+    }
 }
