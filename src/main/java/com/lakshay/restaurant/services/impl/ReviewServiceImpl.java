@@ -125,7 +125,7 @@ public class ReviewServiceImpl implements ReviewService {
                 .orElseThrow(() -> new ReviewNotAllowedException("Review does not exist"));
 
         if(!authorId.equals(existingReview.getWrittenBy().getId())) {
-            throw new ReviewNotAllowedException("Cannot update anther user's review");
+            throw new ReviewNotAllowedException("Cannot update another user's review");
         }
 
         if(LocalDateTime.now().isAfter(existingReview.getDatePosted().plusHours(48))) {
@@ -159,13 +159,16 @@ public class ReviewServiceImpl implements ReviewService {
     public void deleteReview(User author, String restaurantId, String reviewId) {
         Restaurant restaurant = getRestaurantOrThrow(restaurantId);
 
+        Review existingReview = getReviewFromRestaurant(reviewId, restaurant)
+                .orElseThrow(() -> new ReviewNotAllowedException("Review does not exist"));
+
         String authorId = author.getId();
         List<Review> filteredReviews = restaurant.getReviews().stream()
                 .filter(r -> !reviewId.equals(r.getId()))
                 .toList();
 
-        if(!authorId.equals(restaurant.getCreatedBy().getId())) {
-            throw new ReviewNotAllowedException("Cannot delete anther user's review");
+        if(!authorId.equals(existingReview.getWrittenBy().getId())) {
+            throw new ReviewNotAllowedException("Cannot delete another user's review");
         }
 
         restaurant.setReviews(filteredReviews);
