@@ -74,4 +74,4 @@ Alternatively, to run the Spring Boot application separately:
 
 ## API Documentation
 
-Coming soon — will provide detailed API documentation for all endpoints.
+[Dcumentation]{https://western-aluminum-170.notion.site/Restaurant-Review-Platform-API-Documentation-204e44bc5a7f8029a4e3d3d6153a6ffa}.
