@@ -74,4 +74,4 @@ Alternatively, to run the Spring Boot application separately:
 
 ## API Documentation
 
-[Dcumentation]{https://western-aluminum-170.notion.site/Restaurant-Review-Platform-API-Documentation-204e44bc5a7f8029a4e3d3d6153a6ffa}.
+[Dcumentation](https://western-aluminum-170.notion.site/Restaurant-Review-Platform-API-Documentation-204e44bc5a7f8029a4e3d3d6153a6ffa).
